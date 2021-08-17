@@ -11,7 +11,7 @@
     // STM32VL-Discovery green led - PC9 / D13
     #define LED_PORT                GPIOD
     #define LED_PIN                 GPIO_PIN_13
-    #define LED_PORT_CLK_ENABLE     __HAL_RCC_GPIOC_CLK_ENABLE
+    #define LED_PORT_CLK_ENABLE     __HAL_RCC_GPIOD_CLK_ENABLE
 #elif defined STM32F4
     #include <stm32f4xx_hal.h>
 

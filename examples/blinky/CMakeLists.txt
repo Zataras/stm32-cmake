@@ -61,6 +61,7 @@ if(BLINKY_F1_EXAMPLE)
         HAL::STM32::F1::CORTEX
         CMSIS::STM32::F103RB
         STM32::NoSys
+        STM32::Nano
     )
     stm32_print_size_of_target(stm32-blinky-f1)
     stm32_generate_hex_file(stm32-blinky-f1)

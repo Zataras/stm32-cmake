@@ -5,8 +5,8 @@ project(stm32-blinky C ASM)
 set(CMAKE_INCLUDE_CURRENT_DIR TRUE)
 
 # Configure here which STM32 target(s) to build
-option(BLINKY_F4_EXAMPLE "Compile F4 example" ON)
-option(BLINKY_F1_EXAMPLE "Compile F1 example" OFF)
+option(BLINKY_F4_EXAMPLE "Compile F4 example" OFF)
+option(BLINKY_F1_EXAMPLE "Compile F1 example" ON)
 option(BLINKY_L0_EXAMPLE "Compile L0 example" OFF)
 
 set(HAL_COMP_LIST RCC GPIO CORTEX)
@@ -59,10 +59,11 @@ if(BLINKY_F1_EXAMPLE)
         HAL::STM32::F1::RCC
         HAL::STM32::F1::GPIO
         HAL::STM32::F1::CORTEX
-        CMSIS::STM32::F100RB
+        CMSIS::STM32::F103RB
         STM32::NoSys
     )
     stm32_print_size_of_target(stm32-blinky-f1)
+    stm32_generate_hex_file(stm32-blinky-f1)
 endif()
 
 # STM32L0538-Discovery
